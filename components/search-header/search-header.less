@@ -1,0 +1,82 @@
+@import '../../vendor/iconfont.wxss';
+// 搜索框组件
+.search-header {
+    background-color: var(--baseColor);
+    padding: 20rpx 16rpx;
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60rpx;
+        background-color: #fff;
+        border-radius: 8rpx;
+        text {
+            color: #bbb;
+            font-size: 32rpx;
+        }
+        .icon-iconfront- {
+            margin-right: 16rpx;
+        }
+    }
+}
+
+/*轮播图区域*/
+swiper {
+    width: 750rpx;
+    height: 340rpx;
+    image {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/*菜单分类区域*/
+.menus {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 24rpx;
+    padding-bottom: 29rpx;
+        image {
+            width: 128rpx;
+            height: 128rpx;
+        }
+}
+
+/*楼层区域*/
+.floor {
+    .floor-title {
+        width: 750rpx;
+        padding-top: 30rpx;
+        margin-bottom: 20rpx;
+        background-color: #eee;
+        image {
+            height: 59rpx;
+        }
+    }
+    .floor-content {
+        display: flex;
+        padding: 0 16rpx;
+        &-l {
+            image {
+                width: 232rpx;
+                height: 386rpx;
+                margin-right: 10rpx;
+            }
+        }
+        &-r {
+            display: flex;
+            flex-wrap: wrap;
+            image {
+                width: 232rpx;
+                height: 188rpx;
+            }
+            image:nth-child(2n+1){
+                margin-right: 10rpx;
+            }
+            image:nth-child(-n+2){
+                margin-bottom: 10rpx;
+            }
+        }
+    }
+}

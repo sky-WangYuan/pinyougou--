@@ -1,0 +1,97 @@
+<view class="search-header">
+  <view class="search-bar">
+    <text class="iconfont icon-iconfront-"></text>
+    <text>搜索</text>
+  </view>
+</view>
+<!-- banner -->
+<swiper 
+    indicator-dots="{{true}}"
+    autoplay="{{true}}" 
+    interval="{{2000}}" 
+    circular="{{true}}"
+    duration="{{1000}}">
+    <block>
+        <swiper-item>
+          <image src="../../assets/upload/banner1.png"></image>
+        </swiper-item>
+      </block>
+    <block>
+        <swiper-item>
+          <image src="../../assets/upload/banner2.png"></image>
+        </swiper-item>
+      </block>
+</swiper>
+
+<!-- menus -->
+<view class="menus">
+  <view class="menu-item">
+    <image class="" src="../../assets/upload/icon_index_nav_1@2x.png">
+    </image>
+  </view>
+  <view class="menu-item">
+    <image class="" src="../../assets/upload/icon_index_nav_1@2x.png">
+    </image>
+  </view>
+  <view class="menu-item">
+    <image class="" src="../../assets/upload/icon_index_nav_1@2x.png">
+    </image>
+  </view>
+  <view class="menu-item">
+    <image class="" src="../../assets/upload/icon_index_nav_1@2x.png">
+    </image>
+  </view>
+</view>
+
+<!-- floor -->
+<view class="floor">
+  <view class="floor-title">
+    <image src="../../assets/upload/pic_floor01_title.png">
+    </image>
+  </view>
+  <view class="floor-content">
+    <view class="floor-content-l">
+      <image class="" src="../../assets/upload/pic_floor01_1@2x.png"></image>
+    </view>
+    <view class="floor-content-r">
+      <image class="" src="../../assets/upload/pic_floor01_2@2x.png" ></image>
+      <image class="" src="../../assets/upload/pic_floor01_3@2x.png" ></image>
+      <image class="" src="../../assets/upload/pic_floor01_4@2x.png" ></image>
+      <image class="" src="../../assets/upload/pic_floor01_5@2x.png" ></image>
+    </view>
+  </view>
+</view>
+<view class="floor">
+  <view class="floor-title">
+    <image src="../../assets/upload/pic_floor02_title.png">
+    </image>
+  </view>
+  <view class="floor-content">
+    <view class="floor-content-l">
+      <image class="" src="../../assets/upload/pic_floor01_1@2x.png"></image>
+    </view>
+    <view class="floor-content-r">
+      <image class="" src="../../assets/upload/pic_floor01_2@2x.png" ></image>
+      <image class="" src="../../assets/upload/pic_floor01_3@2x.png" ></image>
+      <image class="" src="../../assets/upload/pic_floor01_4@2x.png" ></image>
+      <image class="" src="../../assets/upload/pic_floor01_5@2x.png" ></image>
+    </view>
+  </view>
+</view>
+<view class="floor">
+  <view class="floor-title">
+    <image src="../../assets/upload/pic_floor03_title.png">
+    </image>
+  </view>
+  <view class="floor-content">
+    <view class="floor-content-l">
+      <image class="" src="../../assets/upload/pic_floor01_1@2x.png"></image>
+    </view>
+    <view class="floor-content-r">
+      <image class="" src="../../assets/upload/pic_floor01_2@2x.png" ></image>
+      <image class="" src="../../assets/upload/pic_floor01_3@2x.png" ></image>
+      <image class="" src="../../assets/upload/pic_floor01_4@2x.png" ></image>
+      <image class="" src="../../assets/upload/pic_floor01_5@2x.png" ></image>
+    </view>
+  </view>
+</view>
