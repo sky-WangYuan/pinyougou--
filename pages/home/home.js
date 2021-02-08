@@ -6,66 +6,36 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isHiddenTop: true, //默认不显示顶部按钮
     bannerList:[]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  
+  /* 监听页面加载 */
   onLoad: function (options) {
     this.getBanner()
   },
+
   async getBanner(){
     //接口连接已关闭
     // let res = await banner()
     // console.log(res)
-  },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+    // this.setData({
+    //   bannerList: res.data
+    // })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  //页面滚动
+  onPageScroll(e){
+    // console.log(e.scrollTop)
+    e.scrollTop >= 300 ? this.setData({isHiddenTop: false}) : this.setData({isHiddenTop: true})
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  //点击回到顶部
+  toTop(){
+    // console.log("回到顶部")
+    wx.pageScrollTo({
+      scrollTop:0,
+      duration: 300
+    })
   }
+
 })

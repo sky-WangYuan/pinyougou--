@@ -90,3 +90,9 @@
     </view>
   </view>
 </view>
+
+<!-- 点击回顶部 -->
+<view class="toTop" hidden="{{isHiddenTop}}" bind:tap="toTop">
+    <text class="iconfont icon-xiangshang_jiantou"></text>
+    <text>顶部</text>
+</view>

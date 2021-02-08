@@ -52,3 +52,19 @@ swiper image {
 .floor .floor-content-r image:nth-child(-n+2) {
   margin-bottom: 10rpx;
 }
+/*回顶部*/
+.toTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 98rpx;
+  height: 98rpx;
+  background-color: var(--baseColor);
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+  border-radius: 50%;
+  color: #fff;
+  padding-bottom: 8rpx;
+}
