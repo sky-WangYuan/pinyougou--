@@ -1,12 +1,16 @@
 <search-header></search-header>
-<!-- 搜索内容区 -->
+<!-- 分类内容区 -->
 <view class="search-content">
+
+    <!-- 左侧 -->
     <scroll-view class="search-content-l" scroll-y="{{true}}">
         <block wx:for="{{categoryLeft}}" wx:key="cat_id">
-            <view  class="{{activeIndex===index ? 'active' : ''}}">{{item}}</view>
+            <view bind:tap="clickNav" data-index="{{index}}" class="{{activeIndex===index ? 'active' : ''}}">{{item}}</view>
         </block>
     </scroll-view>
 
+
+    <!-- 右侧 -->
     <scroll-view class="search-content-r" scroll-y="{{true}}">
         <!-- 右侧轮播图 -->
         <view class="search-content-r-banner">
