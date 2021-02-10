@@ -1,6 +1,6 @@
 import fetch from './fetch'
 
-//请求轮播图数据
+//请求轮播图数据 ----------------------首页-----------------------------
 export const banner = ()=>{
     return fetch({
         url: '/home/swiperdata'
@@ -21,9 +21,12 @@ export const floor = ()=>{
     })
 }
 
-//请求分类导航
-export const categoryLeft = ()=>{
+//请求分类导航 ----------------------分类-----------------------------
+export const categoryDatas = ()=>{
     return fetch({
-        url: ''
+        url: '/categories'
     })
 }
+
+//分类- 左侧数据
+// export const 

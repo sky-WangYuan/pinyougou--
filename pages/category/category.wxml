@@ -2,9 +2,9 @@
 <!-- 搜索内容区 -->
 <view class="search-content">
     <scroll-view class="search-content-l" scroll-y="{{true}}">
-        <view class="search-content-l-item active">左侧</view>
-        <view class="search-content-l-item">左侧</view>
-        <view class="search-content-l-item">左侧</view>
+        <block wx:for="{{categoryLeft}}" wx:key="cat_id">
+            <view  class="{{activeIndex===index ? 'active' : ''}}">{{item}}</view>
+        </block>
     </scroll-view>
 
     <scroll-view class="search-content-r" scroll-y="{{true}}">
@@ -13,43 +13,20 @@
             <image mode="widthFix" src="../../assets/upload/category_banner@2x.png"></image>
         </view>
         <!-- 右侧标题和内容 -->
-        <block>
+        <block wx:for="{{categoryRight}}" wx:key="*this">
             <view class="search-content-r-title">
                 <text class="gray" decode="{{true}}">/&emsp;</text>
-                <text>电视</text>
+                <text>{{item.cat_name}}</text>
                 <text class="gray" decode="{{true}}">&emsp;/</text>
             </view>
-            <view class="search-content-r-content">
-                <view class="content-item">
-                    <image src="../../assets/images/tv.png"></image>
-                    <text>曲面电视</text>
-                </view>
-                <view class="content-item">
-                    <image src="../../assets/images/tv.png"></image>
-                    <text>曲面电视</text>
-
-                </view>
-                <view class="content-item">
-                    <image src="../../assets/images/tv.png"></image>
-                    <text>曲面电视</text>
-
-                </view>
-                <view class="content-item">
-                    <image src="../../assets/images/tv.png"></image>
-                    <text>曲面电视</text>
-
-                </view>
-                <view class="content-item">
-                    <image src="../../assets/images/tv.png"></image>
-                    <text>曲面电视</text>
-
-                </view>
-                <view class="content-item">
-                    <image src="../../assets/images/tv.png"></image>
-                    <text>曲面电视</text>
-
-                </view>
-            </view>
+            <view class="search-content-r-content" >
+                <block wx:for="{{item.children}}" wx:key="cat_id" wx:for-index="i" wx:for-item="it">
+                    <view class="content-item">
+                        <image src="{{it.cat_icon}}"></image>
+                        <text>{{it.cat_name}}</text>
+                    </view>
+                 </block>
+             </view>
         </block>
     </scroll-view>
 </view>
