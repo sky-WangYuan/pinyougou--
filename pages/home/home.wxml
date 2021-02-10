@@ -6,90 +6,43 @@
     interval="{{2000}}" 
     circular="{{true}}"
     duration="{{1000}}">
-    <block>
+    <block wx:for="{{bannerList}}" wx:key='goods_id'>
         <swiper-item>
-          <image src="../../assets/upload/banner1.png"></image>
-        </swiper-item>
-      </block>
-    <block>
-        <swiper-item>
-          <image src="../../assets/upload/banner2.png"></image>
+          <image src="{{item.image_src}}"></image>
         </swiper-item>
       </block>
 </swiper>
 
 <!-- menus -->
 <view class="menus">
-  <view class="menu-item">
-    <image class="" src="../../assets/upload/icon_index_nav_1@2x.png">
-    </image>
-  </view>
-  <view class="menu-item">
-    <image class="" src="../../assets/upload/icon_index_nav_2@2x.png">
-    </image>
-  </view>
-  <view class="menu-item">
-    <image class="" src="../../assets/upload/icon_index_nav_3@2x.png">
-    </image>
-  </view>
-  <view class="menu-item">
-    <image class="" src="../../assets/upload/icon_index_nav_4@2x.png">
-    </image>
-  </view>
+  <block wx:for="{{menuList}}" wx:key="image_src">  
+    <view class="menu-item">
+      <image class="" src="{{item.image_src}}">
+      </image>
+    </view>
+  </block>
 </view>
 
 <!-- floor -->
-<view class="floor">
-  <view class="floor-title">
-    <image src="../../assets/upload/pic_floor01_title.png">
-    </image>
-  </view>
-  <view class="floor-content">
-    <view class="floor-content-l">
-      <image class="" src="../../assets/upload/pic_floor01_1@2x.png"></image>
+<block wx:for="{{floorList}}" wx:key="index">
+  <view class="floor">
+    <view class="floor-title">
+      <image src="{{item.floor_title.image_src}}">
+      </image>
     </view>
-    <view class="floor-content-r">
-      <image class="" src="../../assets/upload/pic_floor01_2@2x.png" ></image>
-      <image class="" src="../../assets/upload/pic_floor01_3@2x.png" ></image>
-      <image class="" src="../../assets/upload/pic_floor01_4@2x.png" ></image>
-      <image class="" src="../../assets/upload/pic_floor01_5@2x.png" ></image>
-    </view>
+    <!-- 下面内容区 -->
+      <view class="floor-content" >
+        <view class="floor-content-l">
+          <image class="" src="{{item.product_list[0].image_src}}"></image>
+        </view>
+        <view class="floor-content-r">
+        <block wx:for="{{item.product_list}}" wx:key="i" wx:for-index="i" wx:for-item="it">
+          <image class="" style="width:{{it.image_width}}rpx" wx:if="{{i>0}}" src="{{it.image_src}}" ></image>
+        </block>
+        </view>
+      </view>
   </view>
-</view>
-<view class="floor">
-  <view class="floor-title">
-    <image src="../../assets/upload/pic_floor02_title.png">
-    </image>
-  </view>
-  <view class="floor-content">
-    <view class="floor-content-l">
-      <image class="" src="../../assets/upload/pic_floor02_1@2x.png"></image>
-    </view>
-    <view class="floor-content-r">
-      <image class="" src="../../assets/upload/pic_floor02_2@2x.png" ></image>
-      <image class="" src="../../assets/upload/pic_floor02_3@2x.png" ></image>
-      <image class="" src="../../assets/upload/pic_floor02_4@2x.png" ></image>
-      <image class="" src="../../assets/upload/pic_floor02_5@2x.png" ></image>
-    </view>
-  </view>
-</view>
-<view class="floor">
-  <view class="floor-title">
-    <image src="../../assets/upload/pic_floor03_title.png">
-    </image>
-  </view>
-  <view class="floor-content">
-    <view class="floor-content-l">
-      <image class="" src="../../assets/upload/pic_floor03_1@2x.png"></image>
-    </view>
-    <view class="floor-content-r">
-      <image class="" src="../../assets/upload/pic_floor03_2@2x.png" ></image>
-      <image class="" src="../../assets/upload/pic_floor03_3@2x.png" ></image>
-      <image class="" src="../../assets/upload/pic_floor03_4@2x.png" ></image>
-      <image class="" src="../../assets/upload/pic_floor03_5@2x.png" ></image>
-    </view>
-  </view>
-</view>
+</block>
 
 <!-- 点击回顶部 -->
 <view class="toTop" hidden="{{isHiddenTop}}" bind:tap="toTop">

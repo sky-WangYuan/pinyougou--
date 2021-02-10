@@ -1,2 +1,55 @@
-<!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<search-header></search-header>
+<!-- 搜索内容区 -->
+<view class="search-content">
+    <scroll-view class="search-content-l" scroll-y="{{true}}">
+        <view class="search-content-l-item active">左侧</view>
+        <view class="search-content-l-item">左侧</view>
+        <view class="search-content-l-item">左侧</view>
+    </scroll-view>
+
+    <scroll-view class="search-content-r" scroll-y="{{true}}">
+        <!-- 右侧轮播图 -->
+        <view class="search-content-r-banner">
+            <image mode="widthFix" src="../../assets/upload/category_banner@2x.png"></image>
+        </view>
+        <!-- 右侧标题和内容 -->
+        <block>
+            <view class="search-content-r-title">
+                <text class="gray" decode="{{true}}">/&emsp;</text>
+                <text>电视</text>
+                <text class="gray" decode="{{true}}">&emsp;/</text>
+            </view>
+            <view class="search-content-r-content">
+                <view class="content-item">
+                    <image src="../../assets/images/tv.png"></image>
+                    <text>曲面电视</text>
+                </view>
+                <view class="content-item">
+                    <image src="../../assets/images/tv.png"></image>
+                    <text>曲面电视</text>
+
+                </view>
+                <view class="content-item">
+                    <image src="../../assets/images/tv.png"></image>
+                    <text>曲面电视</text>
+
+                </view>
+                <view class="content-item">
+                    <image src="../../assets/images/tv.png"></image>
+                    <text>曲面电视</text>
+
+                </view>
+                <view class="content-item">
+                    <image src="../../assets/images/tv.png"></image>
+                    <text>曲面电视</text>
+
+                </view>
+                <view class="content-item">
+                    <image src="../../assets/images/tv.png"></image>
+                    <text>曲面电视</text>
+
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+</view>

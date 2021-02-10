@@ -1,5 +1,5 @@
 // pages/home/home.js
-import {banner} from '../../request/request'
+import {banner, menu, floor} from '../../request/request'
 Page({
 
   /**
@@ -7,21 +7,41 @@ Page({
    */
   data: {
     isHiddenTop: true, //默认不显示顶部按钮
-    bannerList:[]
+    bannerList:[],
+    menuList: [],
+    floorList: []
   },
   
   /* 监听页面加载 */
   onLoad: function (options) {
     this.getBanner()
+    this.getMenu()
+    this.getFloor()
   },
 
+  //获取轮播图
   async getBanner(){
-    //接口连接已关闭
-    // let res = await banner()
+    //已更换新的接口
+    let res = await banner()
     // console.log(res)
-    // this.setData({
-    //   bannerList: res.data
-    // })
+    this.setData({
+      bannerList: res
+    })
+  },
+  //获取菜单数据
+  async getMenu(){
+    let res = await menu()
+    // console.log(res)
+    this.setData({
+      menuList: res
+    })
+  },
+  async getFloor(){
+    let res = await floor()
+    console.log(res)
+    this.setData({
+      floorList: res
+    })
   },
 
   //页面滚动
