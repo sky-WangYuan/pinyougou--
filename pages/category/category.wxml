@@ -25,10 +25,10 @@
             </view>
             <view class="search-content-r-content" >
                 <block wx:for="{{item.children}}" wx:key="cat_id" wx:for-index="i" wx:for-item="it">
-                    <view class="content-item">
+                    <navigator url="/pages/list/list?cat_id={{it.cat_id}}" class="content-item">
                         <image src="{{it.cat_icon}}"></image>
                         <text>{{it.cat_name}}</text>
-                    </view>
+                    </navigator>
                  </block>
              </view>
         </block>
