@@ -18,8 +18,12 @@ Page({
       },
     ]
   },
-  onLoad(){
-
+  onLoad(e){
+    // console.log(e)
+    let {cat_id, cat_name} = e
+    wx.setNavigationBarTitle({
+      title: cat_name
+    });
   },
   changeSelect(e){
 
