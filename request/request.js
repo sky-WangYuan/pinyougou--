@@ -28,5 +28,14 @@ export const categoryDatas = ()=>{
     })
 }
 
-//分类- 左侧数据
-// export const 
+//请求商品列表 ----------------------列表-----------------------------
+export const goodsList = (cid, pagenum, pagesize)=>{
+    return fetch({
+        url: '/goods/search',
+        data: {
+            cid,
+            pagenum,
+            pagesize
+        }
+    })
+}
