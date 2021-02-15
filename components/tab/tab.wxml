@@ -1,5 +1,5 @@
 <view class="tab">
     <block wx:for="{{tabs}}" wx:key="id">
-        <view class="tab-item {{item.isActive? 'active': ''}}">{{item.name}}</view>
+        <view class="tab-item {{item.isActive? 'active': ''}}" bind:tap="clickTap" data-id="{{item.id}}">{{item.name}}</view>
     </block>
 </view>

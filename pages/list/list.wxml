@@ -1,3 +1,3 @@
 <search-header></search-header>
-<!-- 将data中数据传递给 子组件 tab -->
-<tab tabs='{{tabs}}'></tab>
+<!-- 将data中数据传递给 子组件 tab  通过自定义事件将方法传给子组件 -->
+<tab tabs='{{tabs}}' bind:myTab="changeSelect"></tab>

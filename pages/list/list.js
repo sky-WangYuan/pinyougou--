@@ -12,10 +12,27 @@ Page({
         isActive: false
       },
       {
-        id:1,
+        id:3,
         name: '价格',
         isActive: false
       },
     ]
+  },
+  onLoad(){
+
+  },
+  changeSelect(e){
+
+    //修改isActive为true
+    let id= e.detail
+
+    let newTabs = [...this.data.tabs] //解构给新的数组
+    newTabs.forEach(item=>{
+      item.id===id? item.isActive=true : item.isActive = false
+    })
+
+    this.setData({ //修改赋值给tabs
+      tabs: newTabs
+    })
   }
 })
