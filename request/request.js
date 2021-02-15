@@ -39,3 +39,13 @@ export const goodsList = (cid, pagenum)=>{
         }
     })
 }
+
+//请求详情信息 ----------------------商品详情-----------------------------
+export const detail = (goods_id)=>{
+    return fetch({
+        url: '/goods/detail',
+        data:{
+            goods_id
+        }
+    })
+}

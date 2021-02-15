@@ -70,6 +70,13 @@
 					"pathName": "pages/list/list",
 					"query": "cat_id=5&cat_name=曲面电视",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品详情页",
+					"pathName": "pages/detail/detail",
+					"query": "goods_id=43986",
+					"scene": null
 				}
 			]
 		}
