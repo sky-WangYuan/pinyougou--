@@ -1,0 +1,31 @@
+.goodsItem {
+  display: flex;
+  height: 240rpx;
+  border-bottom: 1px solid #ccc;
+}
+.goodsItem-l {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.goodsItem-l image {
+  width: 85%;
+  margin: 18rpx;
+}
+.goodsItem-r {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30rpx 20rpx;
+}
+.goodsItem-r .line2 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+}
+.goodsItem-r text .red {
+  color: var(--baseColor);
+}

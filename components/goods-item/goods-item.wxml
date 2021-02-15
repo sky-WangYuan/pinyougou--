@@ -1,0 +1,14 @@
+<block wx:for="{{goods}}" wx:key="goods_id">
+    <!-- 每一个商品元素 -->
+    <navigator class="goodsItem" url="/pages/detail/detail?goods_id={{item.goods_id}}">
+        <view class="goodsItem-l">
+            <image src="{{item.goods_small_logo || 'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}" mode="widthFix"></image>
+        </view>
+        <view class="goodsItem-r">
+            <view class="line2">{{item.goods_name}}</view>
+            <block>
+                <text>￥<text class="red">{{item.goods_price}}</text></text>
+            </block>
+        </view>
+    </navigator>
+</block>
