@@ -1,0 +1,17 @@
+.tab {
+    height: 80rpx;
+    background-color: #f4f4f4;
+    display: flex;
+    &-item {
+        flex: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 6rpx solid #f4f4f4;
+    }
+    .active {
+        border-bottom: 6rpx solid var(--baseColor);
+        color: var(--baseColor);
+        font-weight: 700;
+    }
+}

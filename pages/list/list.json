@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "search-header": "/components/search-header/search-header",
+    "tab": "/components/tab/tab"
+  }
 }

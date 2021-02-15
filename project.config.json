@@ -61,6 +61,14 @@
 					"id": -1,
 					"name": "分类",
 					"pathName": "pages/category/category",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "分类列表",
+					"pathName": "pages/list/list",
+					"query": "cat_id=5&cat_name=曲面电视",
 					"scene": null
 				}
 			]

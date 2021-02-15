@@ -1,2 +1,3 @@
-<!--pages/list/list.wxml-->
-<text>pages/list/list.wxml</text>
+<search-header></search-header>
+<!-- 将data中数据传递给 子组件 tab -->
+<tab tabs='{{tabs}}'></tab>
