@@ -72,12 +72,14 @@ Page({
       hasMore: _page< Math.ceil( res.total / 10 ) //当前页 < 总页数/10
     })
 
+    //停止下拉刷新
+    await wx.stopPullDownRefresh()
     await hideLoading()
 
   },
 
   //上拉刷新
- async onReachBottom(){
+   async onReachBottom(){
     
     let {hasMore} = this.data //解构hasMore
     if(!hasMore) {
@@ -85,6 +87,20 @@ Page({
       return 
     } 
     // console.log("上拉刷新")
+    this.getGoodsList()
+  },
+
+  //下拉刷新
+  onPullDownRefresh(){
+    console.log("下拉刷新")
+
+    //重置数据
+    this.setData({
+      _page: 0,
+      goodsList: [],
+      hasMore: true
+    })
+
     this.getGoodsList()
   }
 

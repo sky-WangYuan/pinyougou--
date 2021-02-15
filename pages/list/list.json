@@ -3,5 +3,7 @@
     "search-header": "/components/search-header/search-header",
     "tab": "/components/tab/tab",
     "goods-item": "/components/goods-item/goods-item"
-  }
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
 }
