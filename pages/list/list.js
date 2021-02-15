@@ -21,7 +21,8 @@ Page({
     cat_id: 0,
     _page: 0,
     pagesize: 10,
-    goodsList: [] //放每个商品的列表
+    goodsList: [], //放每个商品的列表
+    hasMore: true  //是否还加载数据
   },
   onLoad(e){
     // console.log(e)
@@ -57,15 +58,25 @@ Page({
 
   //根据id请求数据
   async getGoodsList(){
-    let {cat_id, _page, pagesize} = this.data
+    let {cat_id, _page} = this.data
     _page++
-    let res = await goodsList(cat_id, _page, pagesize)
-    console.log(res)
+    let res = await goodsList(cat_id, _page)
+    // console.log(res)
 
     this.setData({
-      goodsList: res.goods,
-      _page //更新请求页码
+      goodsList: [...this.data.goodsList, ...res.goods], //追加数据
+      _page,
+      hasMore: _page< Math.ceil( res.total / 10 ) //当前页 < 总页数/10
     })
+  },
+
+  //上拉刷新
+  onReachBottom(){
+    
+    let {hasMore} = this.data //解构hasMore
+    if(!hasMore) return 
+    console.log("上拉刷新")
+    this.getGoodsList()
   }
 
 })

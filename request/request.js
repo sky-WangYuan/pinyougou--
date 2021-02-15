@@ -29,13 +29,13 @@ export const categoryDatas = ()=>{
 }
 
 //请求商品列表 ----------------------列表-----------------------------
-export const goodsList = (cid, pagenum, pagesize)=>{
+export const goodsList = (cid, pagenum)=>{
     return fetch({
         url: '/goods/search',
         data: {
             cid,
             pagenum,
-            pagesize
+            pagesize: 10
         }
     })
 }
