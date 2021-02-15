@@ -1,4 +1,5 @@
 import {goodsList} from '../../request/request'
+import { showLoading ,hideLoading, showToast} from '../../utils/asyncWX'
 Page({
   data: {
     tabs: [
@@ -60,6 +61,8 @@ Page({
   async getGoodsList(){
     let {cat_id, _page} = this.data
     _page++
+
+    await showLoading()
     let res = await goodsList(cat_id, _page)
     // console.log(res)
 
@@ -68,14 +71,20 @@ Page({
       _page,
       hasMore: _page< Math.ceil( res.total / 10 ) //当前页 < 总页数/10
     })
+
+    await hideLoading()
+
   },
 
   //上拉刷新
-  onReachBottom(){
+ async onReachBottom(){
     
     let {hasMore} = this.data //解构hasMore
-    if(!hasMore) return 
-    console.log("上拉刷新")
+    if(!hasMore) {
+      await showToast('没有数据了~~')
+      return 
+    } 
+    // console.log("上拉刷新")
     this.getGoodsList()
   }
 
