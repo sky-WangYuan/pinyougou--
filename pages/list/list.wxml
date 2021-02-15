@@ -5,9 +5,7 @@
 <!-- 分类列表页的商品列表 -->
 <view class="goods">
     <block wx:if="{{tabs[0].isActive}}">
-        <navigator url="/pages/detail/detail">
             <goods-item goods="{{goodsList}}"></goods-item>
-        </navigator>
     </block>
     <block wx:elif="{{tabs[1].isActive}}">
         <view>销量列表</view>
