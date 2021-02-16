@@ -29,6 +29,9 @@
   display: flex;
   align-items: center;
 }
+.carts {
+  padding-bottom: 100rpx;
+}
 .cart_goods {
   height: 240rpx;
   display: flex;
@@ -78,6 +81,9 @@
 }
 .cart_goods_right_bottom .calc .num {
   margin: 10rpx 20rpx;
+}
+.cart_goods:last-child {
+  border-bottom: none;
 }
 .bottomPrice {
   position: fixed;
