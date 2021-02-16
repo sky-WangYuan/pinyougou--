@@ -38,3 +38,16 @@ export const hideLoading = ()=>{
          });
      })
  }
+
+ /**
+  * 获取购物车的收货地址
+  * */
+ export const address=()=>{
+     return new Promise((resolve, reject)=>{
+         //异步代码
+         wx.chooseAddress({
+             success: resolve,
+             fail: reject
+         });
+     })
+ }

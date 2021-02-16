@@ -1,66 +1,44 @@
-// pages/cart/cart.js
+import {address} from '../../utils/asyncWX'
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    isShow: true,
+    addressList: {}
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad(){
+    //页码加载：获取本地收货地址
+    this.getLocalAddress()
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  //获取本地收获地址
+  getLocalAddress(){
 
+    let localAddress = wx.getStorageSync('address');
+    // console.log('本地收货地址',localAddress);
+
+    //判断无收货地址：返回不做处理
+    if(!localAddress) return;
+
+    this.setData({
+      addressList: localAddress
+    })
+
+    
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+  //点击获取地址信息
+ async getAddress(){
 
-  },
+    let addr = await address();
+    //将完整地址拼接，添加到addr中
+    addr.addressDetail = addr.provinceName+addr.cityName+addr.countyName+addr.detailInfo
+    console.log(addr)
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+    this.setData({
+      addressList: addr
+    })
 
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    //本地保存地址数据
+    wx.setStorageSync('address', addr);
   }
 })

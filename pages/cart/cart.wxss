@@ -1,1 +1,21 @@
-/* pages/cart/cart.wxss */
+.address {
+  height: 140rpx;
+}
+.address .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.address .showAddress {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  padding: 20rpx;
+}
+.address .showAddress-top {
+  display: flex;
+  justify-content: space-between;
+}
