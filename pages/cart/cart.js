@@ -12,6 +12,9 @@ Page({
     this.getLocalCart() //获取本地购物车
 
   },
+  onShow(){
+    this.getLocalCart() //获取最新数据
+  },
 
   getLocalCart(){
     //获取本地购物车，若获取不到：设置空数组 或者 return返回都可

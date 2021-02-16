@@ -86,6 +86,7 @@
   display: flex;
   height: 100rpx;
   border-top: 1px solid #ccc;
+  background-color: #fff;
 }
 .bottomPrice .bottom_left {
   display: flex;
