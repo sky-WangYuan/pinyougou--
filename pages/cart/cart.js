@@ -1,12 +1,26 @@
 import {address} from '../../utils/asyncWX'
 Page({
   data: {
-    addressList: {}
+    addressList: {},
+    localCart: []  //本地购物车商品
   },
 
   onLoad(){
-    //页码加载：获取本地收货地址
-    this.getLocalAddress()
+    
+    this.getLocalAddress() //页码加载：获取本地收货地址
+
+    this.getLocalCart() //获取本地购物车
+
+  },
+
+  getLocalCart(){
+    //获取本地购物车，若获取不到：设置空数组 或者 return返回都可
+    let localCart = wx.getStorageSync('cart') || [];
+    // console.log('本地购物车',localCart)
+    
+    this.setData({
+      localCart
+    })
   },
 
   //获取本地收获地址
