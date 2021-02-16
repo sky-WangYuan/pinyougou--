@@ -1,2 +1,8 @@
-<!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+  <swiper indicator-dots="{{true}}"
+        autoplay="{{true}}" interval="{{2000}}" duration="{{1000}}" circular="{{true}}">
+        <block wx:for="{{detailData.pics}}" wx:key="pics_id">
+          <swiper-item>
+            <image mode="aspectFit" src="{{item.pics_mid_url}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
