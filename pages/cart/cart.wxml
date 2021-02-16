@@ -1,15 +1,15 @@
 <view class="address">
-    <!-- 显示点击按钮 -->
-    <view class="button" wx:if="{{isShow}}">
-        <button type="primary" bind:tap="getAddress">点击获取收获地址</button>
-    </view>
-
-    <!-- 显示 地址详情信息 -->
-    <view class="showAddress" wx:else>
-        <view class="showAddress-top">
-            <text>张三</text>
-            <text>010-23243544</text>
+        <!-- 显示点击按钮 -->
+        <view class="button" wx:if="{{!addressList.addressDetail}}">
+            <button type="primary" bind:tap="getAddress">点击获取收获地址</button>
         </view>
-        <view class="showAddress-bottom">北京市</view>
-    </view>
+    
+        <!-- 显示 地址详情信息 -->
+        <view class="showAddress" wx:else>
+            <view class="showAddress-top">
+                <text>{{addressList.userName}}</text>
+                <text>{{addressList.telNumber}}</text>
+            </view>
+            <view class="showAddress-bottom">{{addressList.addressDetail}}</view>
+        </view>
 </view>

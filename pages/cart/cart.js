@@ -1,7 +1,6 @@
 import {address} from '../../utils/asyncWX'
 Page({
   data: {
-    isShow: true,
     addressList: {}
   },
 
