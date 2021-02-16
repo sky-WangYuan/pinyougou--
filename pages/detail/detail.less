@@ -8,3 +8,70 @@ swiper {
         }
     }
 }
+.price {
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-left: 20rpx;
+    font-size: 38rpx;
+    color: var(--baseColor);
+}
+
+.info {
+    display: flex;
+    border-top: 4rpx solid gray;
+    border-bottom: 4rpx solid gray;
+    &-l{
+        flex: 3;
+        word-break:break-all;
+        padding: 0 20rpx;
+        margin: 10rpx 0;
+        border-right: 1px solid gray;
+    }
+    &-r {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10rpx;
+        .icon-shoucang {
+            margin-bottom: 4rpx;
+        }
+    }
+}
+
+.detail {
+    height: 80rpx;
+    font-size: 38rpx;
+    color: var(--baseColor);
+    font-weight: 700;
+    line-height: 80rpx;
+    padding-left: 20rpx;
+}
+.bottomFix {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid gray;
+    .common {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10rpx 0;  
+        background-color: #fff;      
+    }
+    .addCart, .buy {
+        flex: 1.7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        color: #fff;
+        background-color: orange;
+    }
+    .buy {
+        background-color: var(--baseColor);
+    }
+
+}

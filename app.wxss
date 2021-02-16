@@ -13,3 +13,10 @@ page,view,text,swiper,swiper-item,image,navigator {
 image {
   vertical-align: middle;
 }
+/* 文字显示2行 */
+.line2 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
