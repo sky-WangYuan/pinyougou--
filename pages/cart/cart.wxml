@@ -13,3 +13,8 @@
             <view class="showAddress-bottom">{{addressList.addressDetail}}</view>
         </view>
 </view>
+
+<!-- 购物车 -->
+<view class="cart">
+    购物车
+</view>
