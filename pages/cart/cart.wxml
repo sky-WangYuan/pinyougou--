@@ -45,3 +45,17 @@
     </view>
 
 </block>
+
+<!-- 底部计算商品价格 -->
+<view class="bottomPrice">
+    <view class="bottom_left">
+        <checkbox-group bindchange="">
+            <checkbox>全选</checkbox>
+        </checkbox-group>
+    </view>
+    <view class="bottom_middle">
+        <view class="middle_top">合计：<text class="red">￥8930</text></view>
+        <view class="middle_bottom">包含运费</view>
+    </view>
+    <view class="bottom_right">结算(3)</view>
+</view>
