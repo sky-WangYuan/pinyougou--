@@ -52,6 +52,7 @@ swiper swiper-item image {
   bottom: 0;
   width: 100%;
   border-top: 1px solid gray;
+  background-color: #fff;
 }
 .bottomFix .common {
   flex: 1;
