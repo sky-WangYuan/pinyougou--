@@ -1,5 +1,5 @@
 import {detail} from '../../request/request'
-import {showLoading, hideLoading} from '../../utils/asyncWX'
+import {showLoading, hideLoading, showToast} from '../../utils/asyncWX'
 Page({
   data: {
     detailData: {}
@@ -28,7 +28,7 @@ Page({
   },
 
   //加入购物车
-  addCart(){
+ async addCart(){
     let {goods_id,goods_name, goods_price, goods_small_logo } = this.data.detailData
     //1、本地获取数据（购物车），无：空数组
     //2、判断购物车中有无当前点击的商品id
@@ -53,5 +53,8 @@ Page({
     }
 
     wx.setStorageSync('cart', cart); //购物车本地保存
+
+    //提示框
+    await showToast('已加入购物车', 'success')
   }
 })
