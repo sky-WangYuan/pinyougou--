@@ -18,3 +18,26 @@
 <view class="cart">
     购物车
 </view>
+
+<!-- 购物车中商品 -->
+<view class="cart_goods">
+    <view class="cart_goods_left">
+        <checkbox-group bindchange="">
+            <checkbox></checkbox>
+        </checkbox-group>
+    </view>
+    <view class="cart_goods_middle">
+        <image mode="widthFix" src="../../assets/upload/category_product_4@2x.png"></image>
+    </view>
+    <view class="cart_goods_right">
+        <view class="cart_goods_right_top line2">而散sfdvdffg热铜管非你看卤代烃的股份分割和常v兄弟它仍然是如果发不出v下</view>
+        <view class="cart_goods_right_bottom">
+            <text class="price">￥ 0</text>
+            <view class="calc">
+                <text class="jisuan">-</text>
+                <text class="num">1</text>
+                <text class="jisuan">+</text>
+            </view>
+        </view>
+    </view>
+</view>

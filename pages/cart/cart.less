@@ -17,9 +17,6 @@
             display: flex;
             justify-content: space-between;
         }
-        &-bottom {
-
-        }
     }
 }
 .cart {
@@ -32,4 +29,55 @@
     display: flex;
     align-items: center;
 
+}
+.cart_goods {
+    height: 240rpx;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+
+    &_left, &_middle{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &_middle {
+        flex: 2;
+        image {
+            width: 90%;
+        }
+    }
+    &_right {
+        flex: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0 20rpx;
+        &_top {
+            // 让英文以单词分开
+            word-break: break-all;
+        }
+        &_bottom {
+            display: flex;
+            justify-content: space-between;
+            .price {
+                color: var(--baseColor);
+                font-size: 46rpx;
+            }
+            .calc {
+                display: flex;
+                .jisuan {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 60rpx;
+                    height: 60rpx;
+                    border: 1px solid #ccc;
+                }
+                .num {
+                    margin: 10rpx 20rpx;
+                }
+            }
+        }
+    }
 }
