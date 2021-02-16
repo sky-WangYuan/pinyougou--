@@ -20,7 +20,8 @@
 
 <!-- 图文详情 -->
 <view class="detail">
-    图文详情
+    <view class="detail-title">图文详情</view>
+    
     <rich-text nodes="{{detailData.goods_introduce}}"></rich-text>
 </view>
 

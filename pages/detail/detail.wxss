@@ -36,6 +36,9 @@ swiper swiper-item image {
   margin-bottom: 4rpx;
 }
 .detail {
+  padding-bottom: 80rpx;
+}
+.detail .detail-title {
   height: 80rpx;
   font-size: 38rpx;
   color: var(--baseColor);
