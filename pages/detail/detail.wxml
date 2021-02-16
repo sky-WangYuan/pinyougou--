@@ -39,7 +39,7 @@
         <text class="iconfont icon-gouwuchekong"></text>
         <text>购物车</text>
     </navigator>
-    <navigator bind:tap="addCart" url="/pages/cart/cart" class="addCart">加入购物车</navigator>
+    <view bind:tap="addCart" class="addCart">加入购物车</view>
     <view class="buy">立即购买</view>
 </view>
 
