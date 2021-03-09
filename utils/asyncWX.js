@@ -51,3 +51,32 @@ export const hideLoading = ()=>{
          });
      })
  }
+ 
+ /**
+  * 购物车-获取用户授权能力（点击【收货地址按钮】确定还是取消操作）
+  */
+
+  export const userSetting = ()=>{
+      return  new Promise((resolve, reject)=>{
+          //异步操作
+          wx.getSetting({
+              success: resolve,
+              fail: reject
+          });
+      })
+  }
+
+
+ /**
+  * 购物车-打开用户授权能力（处理点击【收货地址按钮】取消操作）
+  */
+
+  export const OpenuserSetting = ()=>{
+      return  new Promise((resolve, reject)=>{
+          //异步操作
+          wx.openSetting({
+              success: resolve,
+              fail: reject
+          });
+      })
+  }

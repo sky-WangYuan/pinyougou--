@@ -1,7 +1,7 @@
 <view class="address">
         <!-- 显示点击按钮 -->
         <view class="button" wx:if="{{!addressList.addressDetail}}">
-            <button type="primary" bind:tap="getAddress">点击获取收获地址</button>
+            <button type="primary" bind:tap="clickGetAddress">点击获取收获地址</button>
         </view>
     
         <!-- 显示 地址详情信息 -->

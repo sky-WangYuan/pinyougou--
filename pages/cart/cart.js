@@ -1,4 +1,4 @@
-import {address} from '../../utils/asyncWX'
+import {address, userSetting, OpenuserSetting} from '../../utils/asyncWX'
 Page({
   data: {
     addressList: {},
@@ -26,6 +26,24 @@ Page({
     })
   },
 
+  //点击【获取收获地址】按钮
+  async clickGetAddress(){
+
+    //1、获取授权
+    let getSetting = await userSetting();
+    console.log('获取权限设置', getSetting.authSetting['scope.address'])
+
+    //2、判断-共3种结果：undefined false true
+    if(getSetting.authSetting['scope.address'] === false){
+      //手动开启客户端设置
+      await OpenuserSetting()
+    } else {
+    
+      this.getAddress() //点击按钮（显示授权弹窗）
+    }
+
+  },
+
   //获取本地收获地址
   getLocalAddress(){
 
@@ -42,7 +60,7 @@ Page({
     
   },
 
-  //点击获取地址信息
+  //点击获取地址信息（显示授权弹窗）
  async getAddress(){
 
     let addr = await address();
