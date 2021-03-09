@@ -33,8 +33,9 @@ Page({
     this.setCount(localCart)
   },
   // -------------- 购物车逻辑开始 --------------------------
+  //计算价格和数量
   setCount(localCart){
-    console.log(localCart)
+    // console.log(localCart)
 
 
     let goods_count=0;
@@ -53,7 +54,20 @@ Page({
     })
   },
 
+  clickCount(e){
+    let {localCart} = this.data
+    let {count, id} = e.currentTarget.dataset
+    
+    let goods= localCart.find(item=>item.goods_id===id)
+    goods.goods_num+=count
 
+    this.setData({
+      localCart
+    })
+
+    //从新计算价格
+    this.setCount(localCart)
+  },
 
 
   // -------------- 购物车逻辑结束 --------------------------

@@ -37,9 +37,9 @@
                 <view class="cart_goods_right_bottom">
                     <text class="price">￥{{item.goods_price}}</text>
                     <view class="calc">
-                        <text class="jisuan">-</text>
-                        <text class="num">{{item.goods_num}}</text>
-                        <text class="jisuan">+</text>
+                        <view class="jisuan" bind:tap="clickCount" data-id="{{item.goods_id}}" data-count='{{-1}}'>-</view>
+                        <view class="num">{{item.goods_num}}</view>
+                        <view class="jisuan" bind:tap="clickCount" data-id="{{item.goods_id}}" data-count='{{1}}'>+</view>
                     </view>
                 </view>
             </view>
