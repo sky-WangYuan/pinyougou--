@@ -80,3 +80,24 @@ export const hideLoading = ()=>{
           });
       })
   }
+
+
+ /**
+  * 购物车-确认取消 提示框
+  */
+
+  export const sureModal = ()=>{
+      return  new Promise((resolve)=>{
+          //异步操作
+          wx.showModal({
+              title: '温馨提示',
+              content: '确定删除吗',
+              showCancel: true,
+              cancelText: '取消',
+              cancelColor: '#000000',
+              confirmText: '确定',
+              confirmColor: '#3CC51F',
+              success: resolve
+          });
+      })
+  }

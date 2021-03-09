@@ -1,4 +1,4 @@
-import {address, userSetting, OpenuserSetting} from '../../utils/asyncWX'
+import {address, userSetting, OpenuserSetting, sureModal} from '../../utils/asyncWX'
 Page({
   data: {
     addressList: {},
@@ -54,12 +54,22 @@ Page({
     })
   },
 
-  clickCount(e){
+ async clickCount(e){
     let {localCart} = this.data
     let {count, id} = e.currentTarget.dataset
     
     let goods= localCart.find(item=>item.goods_id===id)
-    goods.goods_num+=count
+    
+    //判断1的时候点击-
+    if(goods.goods_num===1 && count===-1){
+      let {confirm} = await sureModal(); //获取点击的操作
+      //点击确定-删除该商品
+      if(confirm){
+        localCart = localCart.filter(item=>item.goods_id!==id)
+      }
+    } else {
+      goods.goods_num+=count
+    }
 
     this.setData({
       localCart
