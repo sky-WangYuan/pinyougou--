@@ -48,7 +48,8 @@ Page({
         goods_name,
         goods_price,
         goods_small_logo,
-        goods_num: 1
+        goods_num: 1,
+        isChecked: true
       })
     }
 

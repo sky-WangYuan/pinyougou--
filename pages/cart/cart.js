@@ -2,7 +2,8 @@ import {address, userSetting, OpenuserSetting} from '../../utils/asyncWX'
 Page({
   data: {
     addressList: {},
-    localCart: []  //本地购物车商品
+    localCart: [] , //本地购物车商品
+    isChecked: true
   },
 
   onLoad(){
