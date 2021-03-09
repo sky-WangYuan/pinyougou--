@@ -56,8 +56,8 @@
         </checkbox-group>
     </view>
     <view class="bottom_middle">
-        <view class="middle_top">合计：<text class="red">￥8930</text></view>
+        <view class="middle_top">合计：<text class="red">￥{{goods_count}}</text></view>
         <view class="middle_bottom">包含运费</view>
     </view>
-    <view class="bottom_right">结算(3)</view>
+    <view class="bottom_right">结算({{goods_price}})</view>
 </view>

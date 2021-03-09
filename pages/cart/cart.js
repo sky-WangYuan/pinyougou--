@@ -3,7 +3,9 @@ Page({
   data: {
     addressList: {},
     localCart: [] , //本地购物车商品
-    isChecked: true
+    isChecked: true,
+    goods_count:0,
+    goods_price: 0
   },
 
   onLoad(){
@@ -11,6 +13,7 @@ Page({
     this.getLocalAddress() //页码加载：获取本地收货地址
 
     this.getLocalCart() //获取本地购物车
+
 
   },
   onShow(){
@@ -25,7 +28,35 @@ Page({
     this.setData({
       localCart
     })
+
+    //计算购物车 结算和合计
+    this.setCount(localCart)
   },
+  // -------------- 购物车逻辑开始 --------------------------
+  setCount(localCart){
+    console.log(localCart)
+
+
+    let goods_count=0;
+    let goods_price=0;
+    
+    localCart.forEach(item=>{
+      if(item.isChecked){
+        goods_count+=item.goods_num
+        goods_price += item.goods_num * item.goods_price
+      }
+    })
+
+    this.setData({
+      goods_count,
+      goods_price
+    })
+  },
+
+
+
+
+  // -------------- 购物车逻辑结束 --------------------------
 
   //点击【获取收获地址】按钮
   async clickGetAddress(){
