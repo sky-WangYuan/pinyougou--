@@ -33,6 +33,24 @@ Page({
     this.setCount(localCart)
   },
   // -------------- 购物车逻辑开始 --------------------------
+
+  
+  //点击复选框
+  changeCheckbox(e){
+    let {localCart} = this.data
+    let {id} = e.currentTarget.dataset
+
+    let goods = localCart.find(item=>item.goods_id===id)
+    goods.isChecked = !goods.isChecked
+    
+    this.setData({
+      localCart
+    })
+
+    //调用计算价格
+    this.setCount(localCart)
+  },
+
   //计算价格和数量
   setCount(localCart){
     // console.log(localCart)
@@ -81,6 +99,7 @@ Page({
 
 
   // -------------- 购物车逻辑结束 --------------------------
+
 
   //点击【获取收获地址】按钮
   async clickGetAddress(){

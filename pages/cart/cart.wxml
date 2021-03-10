@@ -25,7 +25,7 @@
     
         <view class="cart_goods">
             <view class="cart_goods_left">
-                <checkbox-group bindchange="">
+                <checkbox-group bindchange="changeCheckbox"  data-id="{{item.goods_id}}">
                     <checkbox checked="{{isChecked}}"></checkbox>
                 </checkbox-group>
             </view>
