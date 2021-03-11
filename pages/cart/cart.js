@@ -51,6 +51,23 @@ Page({
     this.setCount(localCart)
   },
 
+  //点击全选
+  clickAllCheck(){
+    let {localCart, isChecked} = this.data
+
+    localCart.forEach(item=>{
+      item.isChecked = !isChecked
+    })
+
+    this.setData({
+      isChecked : !isChecked,
+      localCart
+    })
+
+    this.setCount(localCart)
+
+  },
+
   //计算价格和数量
   setCount(localCart){
     // console.log(localCart)

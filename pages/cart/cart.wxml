@@ -51,7 +51,7 @@
 <!-- 底部计算商品价格 -->
 <view class="bottomPrice">
     <view class="bottom_left">
-        <checkbox-group bindchange="">
+        <checkbox-group bindchange="clickAllCheck">
             <checkbox checked="{{isChecked}}">全选</checkbox>
         </checkbox-group>
     </view>
